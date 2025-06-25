@@ -1,11 +1,11 @@
 let cobra = [{ x: 10, y: 10 }];
-let comida = makeFood();
+let comida = gerarComida();
 let direcao = 'DIREITA';
 let velocidade = 150;
 let pontos = 0;
 let intervalo;
 
-function init() {
+function iniciar() {
     criarTabuleiro();
     document.addEventListener('keydown', mudarDirecao);
     intervalo = setInterval(moverCobra, velocidade);
@@ -63,7 +63,7 @@ function moverCobra() {
             cabeca.x--;
             break;
         case 'DIREITA':
-            cabeca.x--;
+            cabeca.x++;
             break;
     }
 
@@ -89,7 +89,7 @@ function moverCobra() {
 
     }
 
-    function verificarColisao(cabeca) {
+    function verificaColisao(cabeca) {
         if(cabeca.x < 1 || cabeca.x > 20 || cabeca.y < 1 || cabeca.y > 20) {
 
         }
