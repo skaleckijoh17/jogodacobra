@@ -1,37 +1,49 @@
-body{
-    background-color: #f0f0f0;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --color-01: rgb(0, 0, 50);
+    --color-02: rgb(255, 255, 255);
+    --color-03: rgb(0, 150, 0);
+    --color-04: rgb(150, 0, 0);
 }
 
-.container{
+body {
+    background-color: var(--color-01);
+    font-family: "Raleway", sans-serif;
+    color: var(--color-02); 
+}
+
+.container {
     text-align: center;
 }
 
-.game-board{
+.game-board {
     width: 400px;
     height: 400px;
-    border: 2px solid #000;
+    border: 2px solid var(--color-02);
     display: grid;
-    grid-template-rows: repeat(20, 1fr);
     grid-template-columns: repeat(20, 1fr);
-    background-color: #fff;
+    grid-template-rows: repeat(20, 1fr);
+    background-color: var(--color-02);
 }
-.score{
-    margin-top: 20px;
-    font-size: 24px;
-    font-weight: bold;
 
+.score {
+    margin-top: 20px;
+    font-size: 15px;
 }
+
 .snake {
-    background-color: green;
-    border: 1px solid #45a049;
+    background-color: var(--color-03);
+    border: 1px solid darkgreen;
 }
+
 .food {
-    background-color: red;
-    border: 1px solid #a000;
+    background-color: var(--color-04);
+    border: 1px solid darkred;
     border-radius: 50%;
+}
+
+h1 {
+    text-align: center;
+    margin: 75px 0;
 }
